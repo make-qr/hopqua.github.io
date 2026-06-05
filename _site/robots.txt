@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hopqua.github.io/sitemap.xml 

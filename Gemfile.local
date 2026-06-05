@@ -1,0 +1,6 @@
+# Chỉ dùng preview local (Ruby 4.x). GitHub Pages vẫn dùng Gemfile gốc.
+source "https://rubygems.org"
+
+gem "jekyll", "~> 4.4"
+gem "minima", "~> 2.5"
+gem "jekyll-paginate"

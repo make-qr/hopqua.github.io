@@ -47,6 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
     if (headerZalo) {
         headerZalo.addEventListener('click', () => trackZaloClick(null));
     }
+
+    if (typeof renderHomeBlogSection === 'function') {
+        renderHomeBlogSection();
+    }
 });
 
 function setupTierNav() {

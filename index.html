@@ -1,6 +1,3 @@
----
-permalink: /
----
 <!DOCTYPE html>
 <html lang="vi">
 <head>
@@ -113,21 +110,7 @@ permalink: /
                 <h2 class="home-section-title">Bài viết &amp; mẹo chọn hộp</h2>
                 <a href="/blog/" class="home-blog-all">Xem tất cả →</a>
             </div>
-            <div class="blog-card-grid">
-{% for post in site.posts limit:4 %}
-                <article class="blog-card">
-                    {% if post.image %}
-                    <a href="{{ post.url | relative_url }}" class="blog-card-media" aria-hidden="true" tabindex="-1">
-                        {% assign post_thumb = post.image | replace: '.jpeg', '-thumb.jpeg' | replace: '.jpg', '-thumb.jpg' %}
-                        <img src="{{ post_thumb | relative_url }}" alt="" width="400" height="250" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='{{ post.image | relative_url }}';">
-                    </a>
-                    {% endif %}
-                    <time class="blog-card-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%d/%m/%Y" }}</time>
-                    <h3 class="blog-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-                    <a href="{{ post.url | relative_url }}" class="blog-card-read">Đọc bài →</a>
-                </article>
-{% endfor %}
-            </div>
+            <div class="blog-card-grid" id="home-blog-grid"></div>
         </section>
 
         <section class="home-after-catalog" aria-label="Liên hệ và thông tin thêm">
@@ -241,6 +224,7 @@ permalink: /
     <script src="js/product-images-manifest.js"></script>
     <script src="js/image-utils.js"></script>
     <script src="js/sales-utils.js"></script>
+    <script src="js/home-posts.js"></script>
     <script src="js/main.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', function () {
